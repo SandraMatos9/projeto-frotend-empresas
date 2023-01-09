@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Roboto:wght@100&display=swap');
+main{
+    background-image: url("../assets/Rectangle\ 7.png");
+    max-width:358px;
+    width: 100%;
+    height: 612px;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header{
+    box-sizing: border-box;
+    padding: 21px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
+    
+}
+.logosJuntas{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    
+
+}
+.divDoForm{
+    height: 500px;
+}
+.botoesHomeLogin{
+    display: flex;
+    justify-content: right;
+}
+
+.divBotoesLoginCadastro{
+    display: flex;
+    margin: 11px;
+    width: 310px;
+    justify-content: space-between;
+}
+.btnMenu{
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #FFFFFF;
+}
+.btnLogin{
+    box-sizing: border-box;
+    width: 149px;
+    height: 48px;
+    /* display: none; */
+    border: 1px solid #4200FF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    align-items: center;
+    color: #4200FF;
+    padding: auto;
+    justify-content: center;
+}
+.btnCadastro{
+    width: 149px;
+    height: 48px;
+    background: #4200FF;
+    border: none;
+    /* display: none; */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    align-items: center;
+    padding: auto;
+    justify-content: center;
+}
+input{
+    width: 324px;
+    height: 42px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+select{
+    width: 330px;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+.btnCadastrar{
+    height: 48px;
+    width: 330px;
+    border-radius: 0px;
+    background: #4200FF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+
+}
+.btnHome{
+    
+    border: 1px solid #4200FF;
+    height: 48px;
+    width: 142px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #4200FF;
+    margin-right: 11px;
+
+
+}
+.btnHomeLogin{
+    height: 48px;
+    width: 142px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    background: #4200FF;
+    text-align: center;
+    
+    color: #FFFFFF;
+
+
+}
+.descricaoLogin{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+    text-align: center;
+    margin-left: 13px;
+    
+}
+
+
+.btnRetornar{
+    height: 48px;
+    width: 330px;
+    background-color: #FFFFFF;
+    border: 1px solid #4200FF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #4200FF;
+}
+
+.divform{
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.pCadastrar{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 48px;
+    color: #000000;
+    padding-left: 13px;
+    
+}
+
+
+@media (min-width:800px){
+    header{
+        height: 80px;
+        max-width: 1440px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    body{
+        width: 1140px;
+        margin-left: 140px;
+        margin-right: 140px;
+        
+    }
+    main{
+        max-width: 1440px;
+        width: 100%;
+        height: 844px;
+        background-image: url("../assets/Rectangle\ 7\ desktop.png");
+        
+        flex-direction: column;
+        padding-left: 43px;
+        justify-content: center;
+        
+    }
+    .cardCadastrar{
+        width: 506px;
+        height: 549px;
+        background: rgba(255, 255, 255, 0.95);
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        padding-left:43px;
+    }
+    input{
+        width: 422px;
+        height: 52px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        padding-left: 5px;
+    }
+    select{
+        width: 422px;
+        height: 52px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 5px;
+    }
+    .btnCadastrar{
+        
+        width: 422px;
+        border-radius: 0px;
+        height: 48px;
+        cursor: pointer;
+
+
+    }
+    .btnRetornar{
+        width: 422px;
+        border-radius: 0px;
+        height: 48px;
+        cursor: pointer;
+
+    }
+    .selecionarSetor{
+        max-width: 550px;
+        width: 100%;
+    }
+    .cardSelecionaSetor{
+        max-width: 550px;
+        width: 100%;
+        Height:743px;
+    }
+    .cardEmprego{
+        width: 489px;
+        height: auto;
+        
+    }
+    .logoKenzieEmpresas{
+        width: 172px;
+        height: 21px;
+    }
+    .imglogoElipse{
+        width: 16px;
+        height: 16px;
+    }
+    .liListaEmpresas{
+        
+        height: auto ;
+        width:400px;
+    }
+    #setorSelect{
+        width: 550px;
+    }
+    .btnLogin{
+        display:flex;
+
+    }
+    .btnCadastro{
+        display:flex;
+
+    }
+    .btnVector{
+        display: none;
+    }
+    #menu a {
+        display: none;
+
+    }
+    .sectionImagemHome{
+        display: flex;
+        max-width: 1440px;
+        width: 100%;
+    }
+   
+    .ulCardEmprego{
+        width: 450px;
+        
+
+    }
+    .divDentroLi{
+        width: 389px;
+
+    }
+    .sectionCardSelecionaSetor{
+        max-width: 489px;
+        width: 100%;
+        height: 743px;
+    }
+  .form{
+    display: flex;
+    
+    
+
+  }
+}
+
+
+
+
+
+
+body,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+
+
+#header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media(max-width:1440px){
+    .header{
+        width: 100%;
+        box-sizing: border-box;
+        height: 70px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        max-width: 1440px;
+        width: 100%;
+        justify-content: space-between;
+        background: white;
+        
+    }
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+    main{
+        max-width:1440px ;
+        width: 100%;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1440px;
+    }
+    .botoesHomeLogin{
+        display: none;
+    }
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: white;
+    
+    z-index: 1000;
+  
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    display: flex;
+    flex-direction: row;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+  .sectionImagemHome{
+    display: none;
+  }
+  .cardCadastrar{
+    max-width: 358px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    /* padding: 13px; */
+    height: 519px;
+}
+
+}

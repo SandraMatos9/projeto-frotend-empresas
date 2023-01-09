@@ -1,0 +1,179 @@
+header{
+    height: 80px;
+    width: 1440px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    margin-left: 131px;
+    padding-top: 30px;
+
+}
+
+main{
+    width: 1182px;
+    /* height: 947px; */
+
+}
+
+.btnLogout{
+    box-sizing: border-box;
+    height: 48px;
+    width: 142px;
+    border: 1px solid #4200FF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin-right:140px ;
+    color: #4200FF;
+    cursor: pointer;
+}
+.divElipseELogo{
+    align-items: center;
+    justify-content: space-between;
+   
+    margin-left:140px ;
+}
+main{
+    
+    width: 1440px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+    margin-left: 131px;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+#dadosUsuario{
+    width: 1180px;
+    height: 121px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.divemailPlenoHome{
+    display: flex;
+    justify-content: space-between;
+    padding: 31px;
+}
+
+#respostaParaUsuario{
+    width: 1178px;
+    height: 467px;
+    background: #F8F8F8;
+    border: 1px solid #A8A8A8;
+    margin-top: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sectionMensagem{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #000000;
+}
+
+.divDepartSelectCriar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 141px;
+    margin-right: 140px;
+    align-items: center;
+    margin-top: 184px;
+}
+.pDepartamentos{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+}
+select{
+    width: 282px;
+    height: 32px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+.btnCriar{
+    Width:150px;
+    Height: 48px;
+    background: #4200FF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.ulDepartamentos{
+    width: 1182px;
+    height: 385px;
+    background: #F8F8F8;
+    margin-left: 140px;
+    margin-bottom:70px ;
+    padding: 34px;
+}
+.ulUsuariosCadastrados{
+    width: 1182px;
+    height: 385px;
+    background: #F8F8F8;
+    margin-left: 140px;
+    padding: 34px;
+
+}
+.liDepartamentos{
+    width: 489px;
+    height: 196px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #4200FF;
+    list-style: none;
+    margin-left:56px;
+    display: flex;
+    flex-direction: column;
+    padding: 56px;
+
+}
+
+.liUsuariosCadastrados{
+    width: 489px;
+    height: 196px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #4200FF;
+    list-style: none;
+    margin-left: 56px;
+    display: flex;
+    flex-direction: column;
+    padding: 56px;
+
+}
+.icones{
+    display: flex;
+    align-items: center;
+}
+.divIcones{
+    display: flex;
+    flex-direction:row ;
+    margin-left: 174px;
+}
+.pUsuariosCadastrados{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    margin-left: 567px;
+    color: #000000;
+}

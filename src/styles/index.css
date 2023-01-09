@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Roboto:wght@100&display=swap');
+
+header{
+    box-sizing: border-box;
+    padding: 21px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 389px;
+}
+.logosJuntas{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    
+
+}
+
+
+.cardSelecionaSetor{
+    width: 331px;
+    height: 332px;
+    background: #F8F8F8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    
+}
+
+.ulCardEmprego{
+    box-sizing: border-box;
+    width: 241px;
+    height: 211px;
+    border-bottom: 1px solid #4200FF;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    margin: 15px;
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+   
+    
+    
+    
+}
+#idSetor{
+    width: 73px;
+    height: 32px;
+    border: 1px solid #4200FF;
+    border-radius: 255px;
+    width: 41px;
+    height: 19px;
+    padding: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #4200FF;
+}
+.pEmpresaName{
+    width: 178px;
+    height: 27px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+}
+.pHoras{
+    width: 65px;
+    height: 19px;
+    left: 49px;
+    top: 275px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+
+
+}
+.pSetor{
+    width: 41px;
+    height: 19px;
+    left: 65px;
+    top: 316px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #4200FF;
+    width: 73px;
+    height: 32px;
+    left: 49px;
+    top: 310px;
+
+    border: 1px solid #4200FF;
+    border-radius: 255px;
+    text-align: center;
+    align-items: center;
+    padding: 6px;
+
+}
+main{
+    width:358px;
+    height:672px;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.divModalLoginCadastro{
+    height: 95px;
+    width: 358px;
+    border-radius: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    display: flex;
+    margin: 0 auto;
+}
+.btnLogin{
+    box-sizing: border-box;
+    width: 149px;
+    height: 48px;
+    /* display: none; */
+    border: 1px solid #4200FF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    align-items: center;
+    color: #4200FF;
+    padding: auto;
+    justify-content: center;
+}
+.btnCadastro{
+    width: 149px;
+    height: 48px;
+    background: #4200FF;
+    border: none;
+    /* display: none; */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    align-items: center;
+    padding: auto;
+    justify-content: center;
+}
+.sectionCardSelecionaSetor{
+   
+    height: 331px;
+    width: 332px;
+    background: #F8F8F8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    overflow: scroll;
+}
+
+.sectionImagemHome{
+    height: 743px;
+    width: 550px;
+    border-radius: 0px;
+    display: none;
+}
+#setorSelect{
+    width: 331px;
+    height: 52.18px;
+    background: #4200FF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    
+    
+    margin-top: 23px;
+
+    color: #FFFFFF;
+    
+}
+.liListaEmpresas{
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    width: 200px;
+    height: 210px;
+
+}
+.selecionarSetor{
+    display: flex;
+   justify-content: center;
+    align-items: center;
+}
+.divBotoesLoginCadastro{
+    display: flex;
+    margin: 11px;
+    width: 310px;
+    justify-content: space-between;
+}
+.btnMenu{
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #FFFFFF;
+}
+.divBotoesLoginCadastroDesktop{
+    display:none;
+}
+
+
+@media (min-width:800px){
+    header{
+        height: 80px;
+        max-width: 1440px;
+        width: 100%;
+    }
+    body{
+        width: 1140px;
+        margin-left: 140px;
+        margin-right: 140px;
+        
+    }
+    main{
+        max-width: 1440px;
+        width: 100%;
+        height: 1024px;
+        display: flex;
+        flex-direction: row;
+        padding: 50px;
+        
+    }
+    .selecionarSetor{
+        max-width: 550px;
+        width: 100%;
+    }
+    .cardSelecionaSetor{
+        max-width: 550px;
+        width: 100%;
+        Height:743px;
+    }
+    .cardEmprego{
+        width: 489px;
+        height: auto;
+        
+    }
+    .logoKenzieEmpresas{
+        width: 172px;
+        height: 21px;
+    }
+    .imglogoElipse{
+        width: 16px;
+        height: 16px;
+    }
+    .liListaEmpresas{
+        
+        height: auto ;
+        width:400px;
+    }
+    #setorSelect{
+        width: 550px;
+    }
+    .btnLogin{
+        display:flex;
+
+    }
+    .btnCadastro{
+        display:flex;
+
+    }
+    .btnVector{
+        display: none;
+    }
+    #menu a {
+        display: none;
+
+    }
+    .sectionImagemHome{
+        display: flex;
+        max-width: 1440px;
+        width: 100%;
+    }
+   
+    .ulCardEmprego{
+        width: 450px;
+        
+
+    }
+    .divDentroLi{
+        width: 389px;
+
+    }
+    .sectionCardSelecionaSetor{
+        max-width: 489px;
+        width: 100%;
+        height: 743px;
+    }
+  
+}
+
+
+
+
+
+
+body,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+
+
+#header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  
+  background: white;
+}
+main{
+    max-width: 1440px;
+    width: 100%;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: white;
+    
+    z-index: 1000;
+  
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    display: flex;
+    flex-direction: row;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+  .sectionImagemHome{
+    display: none;
+  }
+
+}
