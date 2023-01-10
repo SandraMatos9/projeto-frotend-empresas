@@ -34,16 +34,12 @@ async function getListaEmpresas(){
 
 
 function renderizarEmpresasnaHome({uuid,name,opening_hours,sectors}){
-    console.log({uuid,name,opening_hours,sectors})
-    const localizandoHtml = document.querySelector('.sectionCardSelecionaSetor')
-    const ulEmpresas = document.createElement('ul')
+  
     const liEmpresas= document.createElement('li')
     const divLi =document.createElement('div')
     const pEmpresaName = document.createElement('p')
     const pHoras = document.createElement('p')
     const pSetor = document.createElement('p')
-    console.log(localizandoHtml)
-    ulEmpresas.classList.add('ulCardEmprego')
     liEmpresas.classList.add('liListaEmpresas')
     liEmpresas.id=uuid
     divLi.classList.add('divDentroLi')
@@ -55,9 +51,12 @@ function renderizarEmpresasnaHome({uuid,name,opening_hours,sectors}){
     pSetor.innerText=sectors.description
     divLi.append(pEmpresaName,pHoras,pSetor)
     liEmpresas.append(divLi)
-    ulEmpresas.appendChild(liEmpresas)
-    localizandoHtml.appendChild(ulEmpresas)
+    return liEmpresas
 }
+
+
+
+
 
 const btnMobile = document.getElementById('btn-mobile');
 
@@ -76,3 +75,19 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+
+
+
+// function selecionandoSetores(){
+//     const selecinando= document.querySelector('select')
+//     const
+//     selecinando.addEventListener('change', (select) =>{
+//         console.log(select.value)
+//         if(select.value==sectors.description){
+//             return renderizarEmpresasnaHome()
+//         }
+//     })
+    
+// }
+// selecionandoSetores()

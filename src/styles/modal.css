@@ -1,0 +1,436 @@
+
+
+/* css modal editar perfil */
+.modalDivEditarPerfil{
+    width: 506px;
+    height: 421px;
+    left: 467px;
+    top: 302px;
+    background-color: white;
+    flex-direction: column;
+    z-index: 2;
+    gap: 23px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6 );
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-font2);
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px; */
+  
+    
+
+}
+.modal_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.249);
+    width: 100vw;
+    height:100vh;
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+    color:var(--color-font2);
+
+}
+.btnXModal{
+    
+    display: flex;
+    width: 17px;
+    height: 17px;
+    background-color: red;
+
+}
+  
+.pEditarPerfil{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #000000;
+}
+
+.btnEditarPerfil{
+    background: #4200FF;
+    height: 48px;
+    width: 430px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+input{
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    height: 52px;
+    width: 422px;
+}
+.btnIconeEditarPerfilModal{
+    height: 48px;
+    width: 422px;
+    background: #4200FF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    
+
+}
+
+
+/* modal editar usuario */
+
+.divEditarUsuario{
+    height: 342px;
+    width: 506px;
+    border:1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnX{
+    Width:17px;
+    height: 17px;
+    margin-left: 400px;
+}
+select{
+    width: 422px;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 5px;
+}
+
+.btnEditarUsuario{
+    width: 422px;
+    height: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #4200FF;
+}
+.pEditarUsuario{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #000000;
+}
+
+
+/* <!-- modal editar departamento --> */
+/* .divCriarDepart{
+    width: 506px;
+    height: 402px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid;
+
+}
+.btnX{
+    margin-left: 400px;
+    margin-top: 10px;
+
+}
+.pCriarDepart{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #000000;
+
+    
+}
+
+.btnCriarDepart{
+    width: 422px;
+    height: 48px;
+    background: #4200FF;
+    margin-bottom: 5px;
+}
+input{
+    width: 422px;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+    margin-bottom: 13px;
+}
+select{
+    width: 422px;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+    margin-bottom: 13px;
+
+} */
+
+
+/* modal realmente deseja remover usuario */
+/* .divDesejaRemoverUsuario{
+    width: 733px;
+    height: 292px;
+    background: #FFFFFF;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnX{
+    margin-left: 690px;
+    margin-top: 21px;
+}
+.btnDeletar{
+    width: 422px;
+    height: 48px;
+    background: #4BA036;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.pTituloRealmenteRemover{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+
+    color: #000000;
+} */
+
+/* modal realmente deseja deletar departamento nome e demitir funcionario usuario */
+/* .divDesejaRemoverUsuario{
+    width: 733px;
+    height: 292px;
+    background: #FFFFFF;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnX{
+    margin-left: 690px;
+    margin-top: 21px;
+}
+.btnDeletar{
+    width: 422px;
+    height: 48px;
+    background: #4BA036;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.pTituloRealmenteRemover{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+
+    color: #000000;
+} */
+
+/* modal criar departamento */
+/* .divCriarDepart{
+    width: 506px;
+    height: 402px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid;
+
+}
+.btnX{
+    margin-left: 400px;
+    margin-top: 10px;
+
+}
+.pCriarDepart{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #000000;
+
+    
+}
+
+.btnCriarDepart{
+    width: 422px;
+    height: 48px;
+    background: #4200FF;
+    margin-bottom: 5px;
+}
+input{
+    width: 422px;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+    margin-bottom: 13px;
+}
+select{
+    width: 422px;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+    margin-bottom: 13px;
+
+} */
+
+/* modal nome Departamento */
+/*  
+
+.divNomeDoDepartamento{
+    width: 857px;
+    background: #FFFFFF;
+    
+
+}
+.pNomeDepartamento{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #000000;
+}
+.pEmpresaPertencente{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.pDescricaoDepart{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+
+}
+.selectContratar{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+
+}
+select{
+    width: 422px;
+    height: 52px;
+    margin-top: 113px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.btnContratar{
+    width: 157px;
+    height: 48px;
+    background: #4BA036;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-left: 265px;
+    border: none;
+
+}
+   
+.ulNomeDepartamento{
+    width: 814px;
+    height: 290px;
+    background: #F8F8F8;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+.liNomeDepartamento{
+    list-style: none;
+    width: 306px;
+    height: 196px;
+    background: #FFFFFF;
+      width: 306px;
+    height: 196px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #4200FF;
+
+}
+.pTituloUserName{
+    
+}
+p{
+
+}
+.btnDesligar{
+    width: 157px;
+    height: 48px;
+    border: 1px solid #CE4646;
+    background-color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #CE4646;
+    margin-left: 74px;
+
+}
+.divOrganizacao{
+    display: flex;
+    flex-direction: row;
+}
+             */

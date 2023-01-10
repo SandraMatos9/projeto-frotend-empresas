@@ -35,18 +35,20 @@ header{
 .ulCardEmprego{
     box-sizing: border-box;
     width: 241px;
-    height: 211px;
+    /* height: 211px; */
     border-bottom: 1px solid #4200FF;
     margin-top: 25px;
     display: flex;
     flex-direction: column;
     padding: 12px;
     margin: 15px;
-    background: white;
+    background: #F8F8F8;
     display: flex;
     align-items: center;
     flex-direction: column;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    gap: 10px;
+    
    
     
     
@@ -124,7 +126,7 @@ main{
     height:672px;
     background-color: white;
     padding: 15px;
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     align-items: center;
 }
@@ -317,12 +319,16 @@ main{
     }
     .divDentroLi{
         width: 389px;
+        margin-bottom: 15px;
 
     }
     .sectionCardSelecionaSetor{
         max-width: 489px;
         width: 100%;
         height: 743px;
+    }
+    .liListaEmpresas{
+        margin-bottom: 10px;
     }
   
 }
@@ -389,6 +395,12 @@ main{
 
 
 @media (max-width: 600px) {
+    .divDentroLi{
+        height: 211px; 
+        border-bottom: 1px solid #4200FF;
+        background-color: white;
+        margin-bottom: 5px;
+    }
   #menu {
     display: block;
     position: absolute;
@@ -450,6 +462,9 @@ main{
   }
   .sectionImagemHome{
     display: none;
+  }
+  .liListaEmpresas{
+    margin-bottom: 10px;
   }
 
 }
