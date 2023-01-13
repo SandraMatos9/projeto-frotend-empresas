@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/modal.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,19 +17,20 @@
             <img src="../assets/Kenzie Empresas.png" alt="">
         </div>
 
-        <button class="btnLogout">Logout</button>
+        
+        <a target="_blank" href="/index.html"><button class="btnLogout">Logout</button><a>
     </header>
     <main>
         <div class="divDepartSelectCriar">
             <p class="pDepartamentos">Departamentos</p>
-            <select>
+            <select id="selectEmpresas">
                 <option value="">Selecionar empresa</option>
             </select>
             <button class="btnCriar">+ Criar </button>
         </div>
 
-        <ul class="ulDepartamentos">
-            <li class="liDepartamentos">
+        <ul class="ulDepartamentos" id="listaDepartamentos">
+            <!-- <li class="liDepartamentos">
                 <p class="pDepartamentoName">Nome Departamento</p>
                 <p class="pDepartamentoDescricao">Descrição departamento</p>
                 <p class="pCompanyName">Nome da companhia</p>
@@ -38,27 +40,27 @@
                     <button class="btnLixeira"><img src="../assets/lixeira.png" alt=""></button>
                 </div>
 
-            </li>
+            </li> -->
 
         </ul>
         <p class="pUsuariosCadastrados">Usuários cadastrados</p>
-        <ul class="ulUsuariosCadastrados">
+        <!-- <ul class="ulUsuariosCadastrados">
             <li class="liUsuariosCadastrados">
                 <p class="pUserName">Nome usuário</p>
                 <p class="pPleno">Pleno</p>
                 <p class="pCompanyNameUsuarios">Nome da companhia</p>
                 <div class="divIcones">
-                    <button class="btnEditar"><img src="../assets/corrigir.png" alt=""></button>
-                    <button class="btnLixeira"><img src="../assets/lixeira.png" alt=""></button>
+                    <button class="btnEditarUsuario"><img src="../assets/corrigir.png" alt=""></button>
+                    <button class="btnLixeiraUsuario"><img src="../assets/lixeira.png" alt=""></button>
                 </div>
 
             </li>
             
-        </ul>
+        </ul> -->
 
     </main>
       
-    <script src="../scripts/adm.js"></script>
+    <script type ='module' src="../scripts/adm.js"></script>
     
 </body>
 </html>

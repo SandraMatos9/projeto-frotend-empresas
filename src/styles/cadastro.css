@@ -163,7 +163,7 @@ select{
 }
 
 .divform{
-    padding: 13px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     flex-direction: column;

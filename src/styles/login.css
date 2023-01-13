@@ -54,7 +54,7 @@ header{
 }
 .btnLogin{
     box-sizing: border-box;
-    width: 149px;
+    width: 422px;
     height: 48px;
     /* display: none; */
     border: 1px solid #4200FF;
@@ -65,9 +65,11 @@ header{
     line-height: 21px;
     text-align: center;
     align-items: center;
-    color: #4200FF;
+    color: white;
+    background-color: #4200FF;
     padding: auto;
     justify-content: center;
+}
 }
 .btnCadastro{
     width: 149px;
@@ -114,7 +116,7 @@ select{
     margin-bottom: 13px;
 
 }
-.btnHome{
+.btnHomeLogin{
     
     border: 1px solid #4200FF;
     height: 48px;
@@ -131,7 +133,7 @@ select{
 
 
 }
-.btnHomeLogin{
+.btnHomeLoginCadastro{
     height: 48px;
     width: 142px;
     font-family: 'Inter';
@@ -323,10 +325,25 @@ select{
     }
   .form{
     display: flex;
-    
-    
 
   }
+  .btnLogin{
+    box-sizing: border-box;
+    width: 422px;
+    height: 48px;
+    /* display: none; */
+    border: 1px solid #4200FF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    background-color: #4200FF;
+    padding: auto;
+    justify-content: center;
 }
 
 

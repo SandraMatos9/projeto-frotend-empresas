@@ -123,7 +123,7 @@ select{
     margin: 5px;
 }
 
-.btnEditarUsuario{
+.btnEditarUsuarioConfirmacao{
     width: 422px;
     height: 48px;
     font-family: 'Inter';
@@ -145,8 +145,8 @@ select{
 }
 
 
-/* <!-- modal editar departamento --> */
-/* .divCriarDepart{
+ modal editar departamento 
+.divEditarDepart{
     width: 506px;
     height: 402px;
     background: #FFFFFF;
@@ -156,12 +156,12 @@ select{
     border: 1px solid;
 
 }
-.btnX{
+.btnXEditarModal{
     margin-left: 400px;
     margin-top: 10px;
 
 }
-.pCriarDepart{
+.pEditarDepart{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -172,7 +172,7 @@ select{
     
 }
 
-.btnCriarDepart{
+.btnEditarDepart{
     width: 422px;
     height: 48px;
     background: #4200FF;
@@ -194,11 +194,11 @@ select{
     padding-left: 10px;
     margin-bottom: 13px;
 
-} */
+}
 
 
 /* modal realmente deseja remover usuario */
-/* .divDesejaRemoverUsuario{
+.divDesejaRemoverUsuario{
     width: 733px;
     height: 292px;
     background: #FFFFFF;
@@ -211,7 +211,7 @@ select{
     margin-left: 690px;
     margin-top: 21px;
 }
-.btnDeletar{
+.btnDeletarConfirmar{
     width: 422px;
     height: 48px;
     background: #4BA036;
@@ -232,7 +232,7 @@ select{
     text-align: center;
 
     color: #000000;
-} */
+}
 
 /* modal realmente deseja deletar departamento nome e demitir funcionario usuario */
 /* .divDesejaRemoverUsuario{

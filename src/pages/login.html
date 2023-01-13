@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/login.css">
+    <script type ='module'src="../scripts/index.js" defer></script>
     <!-- <link rel="stylesheet" href="../styles/mediaqueryHome.css"> -->
     <title>Document</title>
 </head>
@@ -15,8 +16,10 @@
             <img class="logoKenzieEmpresas" src="../assets/Kenzie Empresas.png">
         </div>
         <div class="botoesHomeLogin">
-            <button class="btnHome">Home</button>
-            <button class="btnHomeLogin">Cadastro</button>
+            <!-- <button class="btnHome">Home</button>
+            <button class="btnHomeLogin">Cadastro</button> -->
+            <a target="_blank" href="/"><button class="btnHomeLogin">Home</button></a>
+            <a target="_blank" href="../pages/cadastro.html"><button class="btnHomeLoginCadastro">Cadastro</button></a>
            
         </div>
        
@@ -32,27 +35,36 @@
       </header>
 
     <main>
+  
+
+
+        
       
+                   
+                   
+
         <div class="cardCadastrar">
             
             <div class="divDoForm">
-                <form>
-                    <p class="pCadastrar" >Login</p>
-                    <p class="descricaoLogin">Preencha os campos para realizar login</p>
+                <form class="login">
                    
+                    <h2 >Login</h2>
+                    <h3>Preencha os campos para realizar login</h3>
                     <div class="divform">
-                        <input type="email" placeholder="Seu email">
-                    </div>
-                    <div class="divform">
-                        <input type="password" placeholder="Sua senha">
-                    </div>
                     
-                    <div class="divform">
-                        <button class="btnCadastrar">Login</button>
-                        <p class="descricaoLogin">ou</p>
-                        <button class="btnRetornar">Cadastre-se</button>
+                        <input class="inputLogin" type="text" name="email" id="email" placeholder="Seu email">
+                        <input class="inputLogin" type="text" name="password" id="password" placeholder="digite sua senha">
+                        
+                        
+        
                     </div>
- 
+                    <button type="click" class="btnLogin">Login</button>
+                    <p class="descricaoLogin">ou</p>
+                    <!-- <button type="click" class="btnRetornar">Cadastre-se</button> -->
+                    <a target="_blank" href="../pages/cadastro.html"><button class="btnRetornar">Cadastre-se</button></a>
+                  
+                   
+        
                 </form>
 
             </div>
@@ -65,6 +77,7 @@
 
 
 
-    <script src="./src/scripts/script.js"></script>
+    <!-- <script type= 'modules' src="../scripts/index.js"></script> -->
+    <script type= "text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>
