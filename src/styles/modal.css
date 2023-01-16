@@ -15,23 +15,16 @@
     align-items: center;
     padding: 50px;
     
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.6 );
-    width: 100vw;
-    height: 100vh;
+   
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-font2);
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px; */
+   
   
     
 
 }
+
 .modal_container{
     position: fixed;
     top: 0;
@@ -98,7 +91,19 @@ input{
     
 
 }
+.divEditarDepartamento{
+    height: 330px;
+    width: 506px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 
+
+
+}
 
 /* modal editar usuario */
 
@@ -110,10 +115,23 @@ input{
     flex-direction: column;
     align-items: center;
 }
-.btnX{
-    Width:17px;
-    height: 17px;
+.btnXFecharModalEditarDepart{
+    Width:20px;
+    height: 20px;
     margin-left: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.btnXRemover{
+    Width:20px;
+    height: 20px;
+    margin-left: 600px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    
 }
 select{
     width: 422px;
@@ -149,7 +167,7 @@ select{
 .divEditarDepart{
     width: 506px;
     height: 402px;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -177,10 +195,13 @@ select{
     height: 48px;
     background: #4200FF;
     margin-bottom: 5px;
+    color: #FFFFFF;
+    font-size: 20px;
+    cursor: pointer;
 }
 input{
     width: 422px;
-    height: 52px;
+    height: 350px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding-left: 10px;
@@ -207,9 +228,14 @@ select{
     flex-direction: column;
     align-items: center;
 }
-.btnX{
-    margin-left: 690px;
+.btnXVisualizar{
+    margin-left: 700px;
     margin-top: 21px;
+    width: 15px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btnDeletarConfirmar{
     width: 422px;
@@ -235,7 +261,7 @@ select{
 }
 
 /* modal realmente deseja deletar departamento nome e demitir funcionario usuario */
-/* .divDesejaRemoverUsuario{
+.divDesejaRemoverUsuario{
     width: 733px;
     height: 292px;
     background: #FFFFFF;
@@ -259,6 +285,7 @@ select{
     line-height: 22px;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
 }
 .pTituloRealmenteRemover{
     font-family: 'Poppins';
@@ -269,10 +296,10 @@ select{
     text-align: center;
 
     color: #000000;
-} */
+} 
 
-/* modal criar departamento */
-/* .divCriarDepart{
+
+ .divCriarDepart{
     width: 506px;
     height: 402px;
     background: #FFFFFF;
@@ -285,6 +312,7 @@ select{
 .btnX{
     margin-left: 400px;
     margin-top: 10px;
+    cursor: pointer;
 
 }
 .pCriarDepart{
@@ -303,6 +331,7 @@ select{
     height: 48px;
     background: #4200FF;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 input{
     width: 422px;
@@ -320,14 +349,17 @@ select{
     padding-left: 10px;
     margin-bottom: 13px;
 
-} */
+} 
 
-/* modal nome Departamento */
-/*  
 
-.divNomeDoDepartamento{
-    width: 857px;
-    background: #FFFFFF;
+
+
+.domNomeDoDepartamento{
+    width: 757px;
+    background-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     
 
 }
@@ -364,12 +396,12 @@ select{
 
 }
 select{
-    width: 422px;
+    width: 322px;
     height: 52px;
-    margin-top: 113px;
-
+    margin-left: 100px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.3);
+    /* float: right; */
 }
 .btnContratar{
     width: 157px;
@@ -385,16 +417,18 @@ select{
     margin-top: 10px;
     margin-left: 265px;
     border: none;
+    cursor: pointer;
 
 }
    
 .ulNomeDepartamento{
-    width: 814px;
+   
     height: 290px;
     background: #F8F8F8;
     display: flex;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
 
 }
 .liNomeDepartamento{
@@ -418,19 +452,20 @@ p{
     width: 157px;
     height: 48px;
     border: 1px solid #CE4646;
-    background-color: white;
+    background-color:  #CE4646;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    color: #CE4646;
+    color: white;
     margin-left: 74px;
+    cursor: pointer;
 
 }
 .divOrganizacao{
     display: flex;
     flex-direction: row;
-}
-             */
+} 
+            

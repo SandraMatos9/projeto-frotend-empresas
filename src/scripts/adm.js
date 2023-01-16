@@ -1,16 +1,105 @@
-import { getListaEmpresas, departamentosEmpresaId } from "./request.js";
+import { getListaEmpresas, departamentosEmpresaId, listarTodosOsUsuarios, contratarFuncionario,deletarUsuario } from "./request.js";
+
+function  mostrarModalDeletarDepartamento(departamento) {
+    const body = document.querySelector('body');
+    const modal = modalDeletarDepartamento(departamento)
+    body.append(modal)
+}
+ 
+   
+function modalDeletarDepartamento(departamento){
+    const section = document.createElement('section')
+    const divDesejaRemoverUsuario = document.createElement('div')
+    const botaoFecharModalRemover = document.createElement('button')
+    const pTituloRealmenteRemover= document.createElement('h1')
+    const botaoConfirmarDeletar=document.createElement('button')
+
+    divDesejaRemoverUsuario.classList.add('divDesejaRemoverUsuario')
+    botaoFecharModalRemover.classList.add('btnXRemover')
+    pTituloRealmenteRemover.classList.add('pTituloRealmenteRemover')
+    botaoConfirmarDeletar.classList.add('btnDeletar')
+    section.classList.add('modal_container')
+    botaoFecharModalRemover.innerText="X"
+
+
+    pTituloRealmenteRemover.innerText="Realmente deseja deletar o Departamento NOME e demitir seus funcionários?"
+    botaoConfirmarDeletar.innerText="Confirmar"
+
+    divDesejaRemoverUsuario.append(botaoFecharModalRemover,pTituloRealmenteRemover,botaoConfirmarDeletar)
+    section.append(divDesejaRemoverUsuario)
+
+    botaoConfirmarDeletar.addEventListener('click',()=>{
+        liCartao.remove()
+    })
+    botaoFecharModalRemover.addEventListener('click',()=>{
+        section.remove()
+
+    })
+
+    return section
+
+
+}
+
+
+
+
+function mostrarEditarDepartamento(departamento) {
+    const body = document.querySelector('body');
+    const modal = modalEditarDepartamento(departamento)
+    body.append(modal)
+   
+}
+
+
+
+
+function modalEditarDepartamento() {
+    const section = document.createElement('section')
+    const divEditarDepartamento = document.createElement('div')
+    const btnXEditarDepart = document.querySelector('button')
+    const pEditarDepartamento = document.createElement('p')
+    const pAppendInput = document.createElement('p')
+    const pInputValoresDescricao = document.createElement('input')
+    const btnConfirmarEdicaoDepart = document.createElement('button')
+
+    section.classList.add('modal_container')
+    divEditarDepartamento.classList.add('divEditarDepartamento')
+    btnXEditarDepart.classList.add('btnXFecharModalEditarDepart')
+    btnXEditarDepart.innerText='X'
+    pEditarDepartamento.classList.add('pEditarDepart')
+    pEditarDepartamento.innerText="Editar Departamento"
+    pAppendInput.append(pInputValoresDescricao)
+    btnConfirmarEdicaoDepart.classList.add('btnEditarDepart')
+    btnConfirmarEdicaoDepart.innerText="Salvar alterações"
+
+    divEditarDepartamento.append(btnXEditarDepart,pEditarDepartamento,pAppendInput,pInputValoresDescricao,btnConfirmarEdicaoDepart)
+    section.append(divEditarDepartamento)
+
+    btnXEditarDepart.addEventListener('click', () => {
+        section.remove()
+        debugger
+
+       
+    })
+    return section
+}
+
+
 
 function mostrarVisualizarDepartamento(departamento) {
     const body = document.querySelector('body');
     const modal = domModalVisualizarDepartamento(departamento)
+    
     body.append(modal)
 }
 
-function domModalVisualizarDepartamento(departamento) {
+function domModalVisualizarDepartamento(departamento,usu) {
 
     const section = document.createElement('section')
     const divPrincipal = document.createElement('div')
     const btnFecharModal = document.createElement('button')
+    btnFecharModal.innerText = "X"
     const divOrganizacao = document.createElement('div')
     const divOrganizandoP = document.createElement('div')
     const ph1NomeDepartamento = document.createElement('h1')
@@ -28,130 +117,113 @@ function domModalVisualizarDepartamento(departamento) {
     const btnDesligarDaEmpresa = document.createElement('button')
 
 
-
-
     section.classList.add('modal_container')
-    divPrincipal.classList.add('divNomeDoDepartamento')
-    btnFecharModal.classList.add('btnX')
+    divPrincipal.classList.add('domNomeDoDepartamento')
+    btnFecharModal.classList.add('btnXVisualizar')
     divOrganizacao.classList.add('divOrganizacao')
     divOrganizandoP.classList.add('divOrganizandoP')
-    ph1NomeDepartamento.innerText = 'Nome do departamento'
-    pDescricaoDepart.innerText = 'Descricao do departamento'
-    pEmpresaPertencente.innerText = 'Empresa pertencente'
+    ph1NomeDepartamento.innerText = departamento.name
+    pDescricaoDepart.innerText =  departamento.description
+    pEmpresaPertencente.innerText = departamento.companies.name
     divSelectContratar.classList.add('selectContratar')
+    select.classList.add("selectClasse")
+    var optionInitial = document.createElement("option")
+    optionInitial.innerHTML = "Selecionar usuário"
+    select.append(optionInitial)
+
+
+
     botaoContratar.classList.add('btnContratar')
+    botaoContratar.innerText = 'Contratar'
     ulNomeDepartamento.classList.add('ulNomeDepartamento')
     liNomeDepartamento.classList.add('liNomeDepartamento')
     pTituloUserName.classList.add('pTituloUserName')
-    pNivel.classList.innerText = 'Setor'
+    pTituloUserName.innerText = 'UserName'
+    pNivel.innerText = 'Setor'
     pNomeEmpresa.innerText = 'Nome da empresa'
     btnDesligarDaEmpresa.classList.add('btnDesligar')
+    btnDesligarDaEmpresa.innerText = 'Desligar'
+    btnDesligarDaEmpresa.addEventListener('click', () => {
+        const liUsuario=JSON.p
+       
+        liNomeDepartamento.remove()
+         usuario.forEach(async(element) =>{
+            if(element.username == select.value){
+                let data = {
+                    "user_uuid":element.uuid,
+                    "department_uuid": departamento
+                }
+                await deletarUsuario(data)
+        
+    
+            }
+        });
+    })
+    
+
+    
 
 
+    liNomeDepartamento.append(pTituloUserName, pNivel, pNomeEmpresa, btnDesligarDaEmpresa)
+    ulNomeDepartamento.append(liNomeDepartamento)
+    debugger
+    
+    const usuario =[]
+    async function carregarSelectUsuarios() {
+        var usuarios = await listarTodosOsUsuarios()
+        usuarios.forEach(element => {
+            usuario.push(element)
+            const option = document.createElement('option')
+            option.innerHTML = element.username;
+            option.id = element.uuid;
+            select.append(option)
+        })
+        
+    }
+
+
+    botaoContratar.addEventListener("click",  () => {
+        const departamento=JSON.p
+        usuario.forEach(async(element) =>{
+            if(element.username == select.value){
+                let data = {
+                    "user_uuid":element.uuid,
+                    "department_uuid": departamento
+                }
+                await contratarFuncionario(data)
+        
+    
+            }
+
+        })
+      
+      
+        
+    })
+    debugger
+
+  
     divOrganizandoP.append(ph1NomeDepartamento, pDescricaoDepart, pEmpresaPertencente)
     divSelectContratar.append(select, botaoContratar)
     divOrganizacao.append(divOrganizandoP, divSelectContratar)
-    divPrincipal.append(btnFecharModal, divOrganizacao)
+    divPrincipal.append(btnFecharModal, divOrganizacao, ulNomeDepartamento)
     section.append(divPrincipal)
 
     btnFecharModal.addEventListener('click', () => {
         section.remove()
     });
-
+    carregarSelectUsuarios()
     return section
+
 }
 
 // modal criar departamento 
 
-function mostrarDepartModalCriado() {
-    const body = document.querySelector('body');
-    const modalBotaoAbrirPost = document.querySelector(".btnCriar")
-
-    modalBotaoAbrirPost.addEventListener('click', (event) => {
-        event.preventDefault()
-        const modal = modalCriarDepartamentoCard()
-        body.append(modal)
-
-    })
-
-}
-
-// mostrarDepartModalCriado()
-
-function modalCriarDepartamentoCard() {
-
-    const section = document.createElement('section')
-    const divCriarDepart = document.createElement('div')
-    const botaoXcriarDepart = document.createElement('button')
-    const pCriarDepart = document.createElement('p')
-    const selectOptionsEmpresas = document.createElement('select')
-    const optionEmpresas = document.createElement('option')
-    const botaoConfirmarCriarDepart = document.createElement('button')
-
-    section.classList.add('modal_container')
-    divCriarDepart.classList.add('divCriarDepart')
-    botaoXcriarDepart.classList.add('btnX')
-    pCriarDepart.classList.add('pCriarDepart')
-    optionEmpresas.placeholder = 'Selecionar empresa'
-    botaoConfirmarCriarDepart.classList.add('btnCriarDepart')
+console.log('teste')
 
 
-    selectOptionsEmpresas.append(optionEmpresas)
-    divCriarDepart.append(botaoXcriarDepart, pCriarDepart, selectOptionsEmpresas, botaoConfirmarCriarDepart)
-
-    section.append(divCriarDepart)
-
-    botaoXcriarDepart.addEventListener('click', () => {
-        section.remove()
-    })
-
-    return section
-}
-
-// modal editar departamento 
-
-function mostrarEditarDepartamento() {
-
-    const body = document.querySelector('body');
-    const modalBotaoAbrirPost = document.querySelector('.btnEditar')
-
-    modalBotaoAbrirPost.addEventListener('click', (event) => {
-        event.preventDefault()
-        const modal = modalEditarDepartamento()
-        body.append(modal)
-    })
-
-}
-
-function modalEditarDepartamento() {
-    const section = document.createElement('section')
-    const divEditarDepartamento = document.createElement('div')
-    const btnXEditarDepart = document.querySelector('button')
-    const pEditarDepartamento = document.createElement('p')
-    const pAppendInput = document.createElement('p')
-    const pInputValoresDescricao = document.createElement('input')
-    const btnConfirmarEdicaoDepart = document.createElement('btn')
-
-    section.classList.add('modal_container')
-    divEditarDepartamento.classList.add('.divEditarDepart')
-    btnXEditarDepart.classList.add('.btnX')
-    pEditarDepartamento.classList.add('.pEditarDepart')
-    pAppendInput.append(pInputValoresDescricao)
-    btnConfirmarEdicaoDepart.classList.add('.btnEditarDepart')
-
-    divEditarDepartamento.append(btnXEditarDepart, pEditarDepartamento, pAppendInput, btnConfirmarEdicaoDepart)
-    section.append(divEditarDepartamento)
-    btnXEditarDepart.addEventListener('click', () => {
-        section.remove()
 
 
-        return section
-    })
-}
-
-// mostrarEditarDepartamento()
-
-// modal realmente deseja deletar departamento nome e demitir funcionario usuario 
 
 function mostrarDepartamentoDeletado() {
     const body = document.querySelector('body');
@@ -179,6 +251,12 @@ function modalDepartamentoDeletado() {
     pTituloRealmenteRemover.classList.add('pTituloRealmenteRemover')
     btnConfirmarDeletarDepart.classList.add('btnDeletarConfirmar')
 
+    btnConfirmarDeletarDepart.addEventListener('click',()=>{
+        liCartao.remove()
+        
+
+    })
+
     divDepartDeletado.append(botaoFecharDeparDeletado, pTituloRealmenteRemover, btnConfirmarDeletarDepart)
     section.append(divDepartDeletado)
     botaoFecharDeparDeletado.addEventListener('click', () => {
@@ -194,47 +272,6 @@ function modalDepartamentoDeletado() {
 
 // modal editar usuario 
 
-function mostrarEditarUsuario() {
-    const body = document.querySelector('body');
-    const modalBotaoAbrirPost = document.querySelector('.btnEditarUsuario')
-
-    modalBotaoAbrirPost.addEventListener('click', (event) => {
-        event.preventDefault()
-        const modal = modalEditarUsuario()
-        body.append(modal)
-    })
-
-}
-function modalEditarUsuario() {
-    const section = document.createElement('section')
-    const divEditarUsuario = document.createElement('div')
-    const btnXEditarUsuario = document.querySelector('button')
-    const pEditarUsuario = document.createElement('p')
-    const pForm = document.createElement('form')
-    const pSelect = document.createElement('select')
-    const pInputModalidadeTrabalho = document.createElement('option')
-    const pInputNivelProfissional = document.createElement('option')
-    const btnConfirmarEdicaoUsuario = document.createElement('btn')
-
-    section.classList.add('modal_container')
-    divEditarUsuario.classList.add('divEditarUsuario')
-    btnXEditarUsuario.classList.add('btnX')
-    pEditarUsuario.classList.add('pEditarUsuario')
-    btnConfirmarEdicaoUsuario.classList.add('btnEditarUsuarioConfirmacao')
-    pSelect.append(pInputModalidadeTrabalho, pInputNivelProfissional)
-    pForm.append(pSelect)
-    divEditarUsuario.append(btnXEditarUsuario, pEditarUsuario, pForm, btnConfirmarEdicaoUsuario)
-
-    section.append(divEditarUsuario)
-    btnXEditarUsuario.addEventListener('click', () => {
-        section.remove()
-
-        return section
-    })
-
-
-}
-// mostrarEditarUsuario()
 
 // modal removerUsuario
 
@@ -245,12 +282,15 @@ function mostrarRemoverUsuario() {
     modalBotaoAbrirPost.addEventListener('click', (event) => {
         event.preventDefault()
         const modal = modalRemoverUsuario()
+        console.log(modal)
+        console.log("Affff")
+        debugger
         body.append(modal)
     })
 
 }
 
-function modalRemoverUsuario() {
+function modalRemoverUsuario(departamento) {
 
     const section = document.createElement('section')
     const divDesejaRemoverUsuario = document.createElement('div')
@@ -277,6 +317,85 @@ function modalRemoverUsuario() {
 }
 // mostrarRemoverUsuario()
 
+
+// pCompanyName.innerHTML = departamento.companies.name
+
+
+
+
+function mostrarCartaoUsuario(usuarios) {
+    const listaUsuarios = document.querySelector("#listaUsuarios")
+    const liUsuario = document.createElement('li')
+    liUsuario.classList.add('liUsuariosCadastrados')
+    const pUserName = document.createElement('p')
+    pUserName.innerHTML = usuarios.username
+    pUserName.classList.add("pUserName")
+    const pPleno = document.createElement('p')
+    pPleno.innerHTML = usuarios.professional_level
+    pPleno.classList.add("pPleno")
+    const pCompanyNameUsuarios = document.createElement('p')
+
+
+    const divIcones = document.createElement('div')
+    divIcones.classList.add("divIcones")
+    const botaoEditar = document.createElement('button')
+    botaoEditar.classList.add("btnEditarUsuario")
+    const botaoEditarImg = document.createElement('img')
+    botaoEditarImg.src = "..//assets/corrigir.png"
+
+    botaoEditar.append(botaoEditarImg)
+    const botaoLixeira = document.createElement('button')
+    const botaoLixeiraImg = document.createElement('img')
+    botaoLixeira.classList.add("btnLixeiraUsuario")
+    botaoLixeiraImg.src = "../assets/lixeira.png"
+    botaoLixeira.append(botaoLixeiraImg)
+
+    divIcones.append(botaoEditar, botaoLixeira)
+
+    liUsuario.append(pUserName, pPleno, divIcones)
+    listaUsuarios.append(liUsuario)
+
+    botaoEditar.addEventListener('click',()=>{
+        const editarUsuario=JSON.p
+        usuarios.forEach(async(element)=>{
+            if(element.username == select.value){
+                let data = {
+                    "user_uuid":element.uuid,
+                    "department_uuid": departamento
+                }
+                await atualizarFuncionario(data)
+        }
+    })
+})
+
+
+
+
+
+
+
+
+}
+async function carregarUsuariosDoDepartamento() {
+    const todosUsuarios = await listarTodosOsUsuarios()
+    const listaDepartamentos = document.querySelector("#listaDepartamentos")
+    const usuario = document.querySelector(".ulUsuariosCadastrados")
+    debugger
+    todosUsuarios.forEach(usuarios => {
+        mostrarCartaoUsuario(usuarios)
+
+    })
+
+
+}
+carregarUsuariosDoDepartamento()
+
+
+
+
+
+
+
 async function carregarSelectDepartamentos() {
     var empresas = await getListaEmpresas()
     var selectEmpresas = document.querySelector("#selectEmpresas")
@@ -287,6 +406,8 @@ async function carregarSelectDepartamentos() {
 
         option.innerHTML = element.name;
         option.value = element.uuid;
+        localStorage.setItem("departamentoId", element.uuid)
+        
 
         selectEmpresas.append(option)
 
@@ -307,6 +428,11 @@ async function carregarSelectDepartamentos() {
         debugger;
     })
 }
+
+
+
+
+
 
 function mostrarCartaoDepartamento(departamento) {
 
@@ -336,22 +462,25 @@ function mostrarCartaoDepartamento(departamento) {
     divIcones.classList.add("divIcones")
 
     const btnVisualizar = document.createElement("button")
-
     btnVisualizar.classList.add("btnVisualizar")
-    btnVisualizar.addEventListener("click", () => {        
+    btnVisualizar.addEventListener("click", () => {
         mostrarVisualizarDepartamento(departamento);
     })
-
     const btnVisualizarImg = document.createElement("img")
     btnVisualizarImg.src = "../assets/olho.png"
     btnVisualizar.append(btnVisualizarImg)
 
     const btnEditar = document.createElement("button")
-
     btnEditar.classList.add("btnEditar")
-
+    btnEditar.addEventListener("click",()=>{
+        mostrarEditarDepartamento(departamento)
+        debugger
+    })
     const btnEditarImg = document.createElement("img")
     btnEditarImg.src = "..//assets/corrigir.png"
+    btnEditar.append(btnEditarImg)
+   
+    
 
     const btnLixeira = document.createElement("button")
 
@@ -359,6 +488,11 @@ function mostrarCartaoDepartamento(departamento) {
 
     const btnLixeiraImg = document.createElement("img")
     btnLixeiraImg.src = "../assets/lixeira.png"
+    btnLixeira.append(btnLixeiraImg)
+    btnLixeira.addEventListener("click",()=>{
+        mostrarModalDeletarDepartamento(departamento)
+
+    })
 
     divIcones.append(btnVisualizar, btnEditar, btnLixeira)
     liCartao.append(pDepartamento, pDepartamentoDescricao, pCompanyName, divIcones)

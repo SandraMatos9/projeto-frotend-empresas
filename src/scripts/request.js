@@ -1,4 +1,4 @@
-// import{toast} from './toast.js'
+import{toast} from './toast.js'
 
 
 // let chaveToken= 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMzg2NTk2M2MtMzZkNS00YmViLWJlMmYtNDI2ODNiZTJlYTQ0IiwiaXNfYWRtaW4iOmZhbHNlLCJpYXQiOjE2NjY5MTc5MzIsImV4cCI6MTY2Nzc4MTkzMiwic3ViIjoiW29iamVjdCBVbmRlZmluZWRdIn0.zS0QPz6SBanZN6pCVDL028SphZIwy9osySmBumUsegA'
@@ -69,17 +69,19 @@ export async function departamentosEmpresaId(empresaId) {
 export async function listarTodosOsUsuarios() {
     const departIdEmpresa = await fetch(`http://localhost:6278/users`, {
         method: 'GET',
-        headers: requestHeaders,
+        headers: {
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
+        },
     })
-    const departIdEmpresaJson = await product.json()
+    const departIdEmpresaJson = await departIdEmpresa.json()
 
-    if (!product.ok) {
-        toast(departIdEmpresaJson.message, '#CE4646')
-    } else {
-        toast('Criação de usuário bem sucedida', '#4BA036')
-        localStorage.clear()
-        // window.location.replace('/')
-    }
+    // if (!p.ok) {
+    //     toast(departIdEmpresaJson.message, '#CE4646')
+    // } else {
+    //     toast('Criação de usuário bem sucedida', '#4BA036')
+    //     localStorage.clear()
+    //     // window.location.replace('/')
+    // }
     return departIdEmpresaJson
 }
 
@@ -104,15 +106,34 @@ export async function verificarOTipoDeUsuario(token) {
 
 
     if (response.is_admin) {
-        alert("admin logado")
-        window.location.replace('./admin.html')
+      
+        toast("Adiministrador logado com sucesso!", '#4BA036')
+        setTimeout(function(){
+            window.location.replace('./admin.html')
+
+         
+   
+   
+       },3000);
+        
+       
+        
 
 
 
 
     } else {
-        window.location.replace('./user.html')
-        alert('usuario logado')
+        
+        toast("Usuário logado com sucesso!", '#4BA036')
+         setTimeout(function(){
+            window.location.replace('./user.html')
+          
+    
+    
+        },3000);
+       
+        
+      
 
 
 
@@ -362,10 +383,14 @@ export async function deletarUsuario(idDeleteUsuario) {
 export async function contratarFuncionario(data) {
     const contratar = await fetch(`http://localhost:6278/departments/hire/`, {
         method: 'PATCH',
-        headers: requestHeaders,
+        headers:{
+            'Content-type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
         body: JSON.stringify(data)
     })
     const contratarJson = await contratar.json()
+    console.log(contratarJson)
     if (!contratar.ok) {
         toast(contratarJson.message, '#CE4646')
     } else {

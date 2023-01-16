@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+  />
     <link rel="stylesheet" href="../styles/cadastro.css">
     <!-- <link rel="stylesheet" href="../styles/mediaqueryHome.css"> -->
     <title>Document</title>
@@ -17,8 +22,8 @@
         <div class="botoesHomeLogin">
             <!-- <button class="btnHome">Home</button>
             <button class="btnHomeLogin">Login</button> -->
-            <a target="_blank" href="../pages/login.html"><button class="btnHome">Login</button><a>
-                <a target="_blank" href="/index.html"><button class="btnHomeLogin">Retornar</button><a></a>
+            <a  href="../pages/login.html"><button class="btnHome">Login</button><a>
+                <a href="/index.html"><button class="btnHomeLogin">Retornar</button><a></a>
            
         </div>
        
@@ -38,15 +43,13 @@
         <div class="cardCadastrar">
             
             <div class="divDoForm">
-                <form>
+                
                     <p class="pCadastrar" >Cadastre-se</p>
                     <div class="divform">
                         <input type="text" placeholder="Seu nome">
-                    </div>
-                    <div class="divform">
+                   
                         <input type="email" placeholder="Seu email">
-                    </div>
-                    <div class="divform">
+                   
                         <input type="password" placeholder="Sua senha">
                     </div>
                     <div class="divform">
@@ -59,14 +62,16 @@
                        
                     </div>
                     <div class="divform">
-                        <!-- <button class="btnCadastrar"></button>
-                        <button class="btnRetornar">Retornar</button> -->
+                   
 
-                        <a target="_blank" href="./src/pages/login.html"><button class="btnCadastrar">Cadastre-se</button><a>
-                        <a target="_blank" href="/index.html"><button class="btnRetornar">Retornar</button><a>
+                    
+                        <a  href="/index.html"><button class="btnRetornar">Retornar</button><a>
+                     <a  href="./login.html"> <button class="btnCadastrar">Cadastre-se</button><a>
+                        
+
                     </div>
  
-                </form>
+                
 
             </div>
             
@@ -76,6 +81,9 @@
 
 
 
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src= "./src/scripts/user.js"></script>
 
 
 </body>

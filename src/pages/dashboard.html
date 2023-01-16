@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+  />
     <link rel="stylesheet" href="../styles/dashboard.css">
     <title>Document</title>
 </head>
@@ -77,6 +82,8 @@
 
 <!-- modal visualizar Departamento -->
 <!-- <div class="divNomeDoDepartamento">
+
+
     
     <div class="divOrganizacao">
         <div class="divOrganizandoP">
@@ -99,6 +106,57 @@
         </li>
     </ul>
 </div> -->
+<style>
+    *{
+        margin: 0;
+        padding:0;
+    }
+    .toast{
+        position: absolute;
+        right: 0;
+        top:0;
+        margin: 30px;
+        width: 207px;
+        height: 68px;
+        background-color: #4BA036;
+        color: white;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 8px rgba(56, 56, 56, 0.8);
+        font-size: 18px;
+;
+
+    }
+</style>
+
+<div class="toast" id="toast">
+    <div>
+        <strong>Loggin efetuado com sucesso!</strong>
+    </div>
+
+</div>
+<!-- <script>
+    // setTimeout(function(){
+    //     document.getElementById('toast').animate([
+    //         {transform:'translateY(0px)'},
+    //         {transform:'translateX(-300px)'}
+
+    //         ],{
+    //             duration:3000,
+    //             iteration:1
+    //         }
+    //     )
+
+
+    // },3000);
+</script> -->
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="module" src= "./src/scripts/user.js"></script>
+
 
 </body>
 </html>

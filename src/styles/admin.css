@@ -15,6 +15,10 @@ main{
     /* height: 947px; */
 
 }
+.btnXEditarUsuario{
+    width: 17px;
+    height: 17px;
+}
 
 .btnLogout{
     box-sizing: border-box;
@@ -105,7 +109,7 @@ select{
     border: 1px solid #000000;
     border-radius: 15px;
 }
-.btnCriar{
+#btnCriarDepartamento{
     Width:150px;
     Height: 48px;
     background: #4200FF;
@@ -126,17 +130,26 @@ select{
     margin-bottom:70px ;
     padding: 34px;
     overflow:scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+   
 }
 .ulUsuariosCadastrados{
     width: 1182px;
     height: 385px;
     background: #F8F8F8;
     margin-left: 140px;
+    margin-bottom:70px ;
     padding: 34px;
+    overflow:scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
 
 }
 .liDepartamentos{
-    width: 489px;
+    width: 389px;
     height: 196px;
     background: #FFFFFF;
     border-bottom: 1px solid #4200FF;
@@ -145,11 +158,12 @@ select{
     display: flex;
     flex-direction: column;
     padding: 56px;
+    margin-bottom: 20px;
 
 }
 
 .liUsuariosCadastrados{
-    width: 489px;
+    width: 389px;
     height: 196px;
     background: #FFFFFF;
     border-bottom: 1px solid #4200FF;
@@ -158,6 +172,7 @@ select{
     display: flex;
     flex-direction: column;
     padding: 56px;
+    margin-bottom: 20px;
 
 }
 .icones{

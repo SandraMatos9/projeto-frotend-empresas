@@ -6,6 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+  /> -->
     <link rel="stylesheet" href="../styles/admin.css">
     <link rel="stylesheet" href="../styles/modal.css">
     <title>Document</title>
@@ -18,7 +23,7 @@
         </div>
 
         
-        <a target="_blank" href="/index.html"><button class="btnLogout">Logout</button><a>
+        <a  href="/index.html"><button class="btnLogout">Logout</button><a>
     </header>
     <main>
         <div class="divDepartSelectCriar">
@@ -26,7 +31,7 @@
             <select id="selectEmpresas">
                 <option value="">Selecionar empresa</option>
             </select>
-            <button class="btnCriar">+ Criar </button>
+            <button id="btnCriarDepartamento">+ Criar </button>
         </div>
 
         <ul class="ulDepartamentos" id="listaDepartamentos">
@@ -41,11 +46,11 @@
                 </div>
 
             </li> -->
-
+            
         </ul>
         <p class="pUsuariosCadastrados">Usuários cadastrados</p>
-        <!-- <ul class="ulUsuariosCadastrados">
-            <li class="liUsuariosCadastrados">
+        <ul class="ulUsuariosCadastrados" id="listaUsuarios">
+            <!-- <li class="liUsuariosCadastrados">
                 <p class="pUserName">Nome usuário</p>
                 <p class="pPleno">Pleno</p>
                 <p class="pCompanyNameUsuarios">Nome da companhia</p>
@@ -54,13 +59,22 @@
                     <button class="btnLixeiraUsuario"><img src="../assets/lixeira.png" alt=""></button>
                 </div>
 
-            </li>
+            </li> -->
             
-        </ul> -->
+        </ul>
 
     </main>
-      
+
     <script type ='module' src="../scripts/adm.js"></script>
+    <script type="module"src="../scripts/modais.js"></script>
+    <script type="module" src="../scripts/request.js"></script>
+    <script type="module" src="../scripts/user.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
     
 </body>
+
+    
+    
 </html>

@@ -87,13 +87,13 @@ header{
     justify-content: center;
 }
 input{
-    width: 324px;
+    width: 300px;
     height: 42px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 select{
-    width: 330px;
+    width: 300px;
     height: 52px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -101,7 +101,7 @@ select{
 }
 .btnCadastrar{
     height: 48px;
-    width: 330px;
+    width: 300px;
     border-radius: 0px;
     background: #4200FF;
     font-family: 'Inter';
@@ -167,6 +167,7 @@ select{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    gap: 10px;
     
 }
 .pCadastrar{

@@ -1,4 +1,4 @@
-// import {readProfile} from './request.js'
+// import{atualizarFuncionario} from './request'
 function showEditarModal(x){
     const body=document.querySelector('body');
   
@@ -7,10 +7,11 @@ function showEditarModal(x){
     modalBotaoAbrirPost.addEventListener('click',(event) =>{
         // console.log('modalBotaoAbrirPost')
         event.preventDefault()
-        const modal= modalEditar()
+        const modal= modalEditar(x)
         body.append(modal)
         
     })
+    return modalBotaoAbrirPost
   
 }
 
@@ -32,7 +33,7 @@ function modalEditar(x){
 
     section.classList.add('modal_container')
     divModalEditarPerfil.classList.add('modalDivEditarPerfil')
-    botaoFechar.classList.add('btnXEditarModal')
+    botaoFechar.classList.add('btnX')
     botaoFechar.innerText='X'
     pEditarPerfil.classList.add('pEditarPerfil')
     pEditarPerfil.innerText='Editar Perfil'
@@ -46,7 +47,7 @@ function modalEditar(x){
     btnEditarPerfil.classList.add('btnIconeEditarPerfilModal')
     btnEditarPerfil.innerText='Editar perfil'
 
-    botaoFechar.addEventListener('click',() =>{
+    botaoFechar.addEventListener('click',(event) =>{
         section.remove()
     })
     
@@ -63,3 +64,63 @@ function modalEditar(x){
     return  section
 
 }
+
+
+
+
+
+
+
+
+
+function modalCriarDepartamentoCard(departamento) {
+
+    const section = document.createElement('section')
+    const divCriarDepart = document.createElement('div')
+    const botaoXcriarDepart = document.createElement('button')
+    const pCriarDepart = document.createElement('p')
+    const selectOptionsEmpresas = document.createElement('select')
+    const optionEmpresas = document.createElement('option')
+    const botaoConfirmarCriarDepart = document.createElement('button')
+
+    section.classList.add('modal_container')
+    divCriarDepart.classList.add('divCriarDepart')
+    botaoXcriarDepart.classList.add('btnX')
+    pCriarDepart.classList.add('pCriarDepart')
+    optionEmpresas.placeholder = 'Selecionar empresa'
+    botaoConfirmarCriarDepart.classList.add('btnCriarDepart')
+    
+
+    selectOptionsEmpresas.append(optionEmpresas)
+    divCriarDepart.append(botaoXcriarDepart, pCriarDepart, selectOptionsEmpresas, botaoConfirmarCriarDepart)
+
+    section.append(divCriarDepart)
+
+    
+
+    botaoXcriarDepart.addEventListener('click', () => {
+        section.remove()
+    })
+
+    return section
+}
+
+function mostrarDepartModalCriado(departamento) {
+    const body = document.querySelector('body');
+    const modalBotaoAbrirPost = document.querySelector('#btnCriarDepartamento')
+    console.log("Eu vou aprender programação")
+
+    modalBotaoAbrirPost.addEventListener('click', (event) => {
+        event.preventDefault()
+        const modal = modalCriarDepartamentoCard(departamento)
+        console.log(modal)
+        console.log("Eu vou aprender programação")
+
+        
+    })
+    console.log('teste3')
+    return modalBotaoAbrirPost
+    
+}
+
+mostrarDepartModalCriado() 

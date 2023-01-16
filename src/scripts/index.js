@@ -31,17 +31,20 @@ export function renderLogin(){
  
 export async function loginForm(){
     const inputs = document.querySelectorAll('.inputLogin')
-    const buttonLogin= document.querySelector('.btnLogin')
+    const buttonLogin= document.querySelector('.btnLoginPagLogin')
     var loginUser= {}
     let user ={}
     buttonLogin.addEventListener('click',async (event) => {
         event.preventDefault()
+        
         
 
         inputs.forEach(input=>{
             loginUser[input.name] = input.value
             localStorage.setItem([input.name],input.value)
         })
+        localStorage.clear();
+
        user = await login(loginUser)
        console.log()
        await verificarOTipoDeUsuario(user.token)
@@ -114,6 +117,7 @@ export async function renderListaEmpresas(array){
   
 }
 renderListaEmpresas()
+
 
 
 
